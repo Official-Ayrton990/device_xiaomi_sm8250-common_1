@@ -24,6 +24,7 @@ import android.util.Log;
 
 import org.aospextended.settings.doze.DozeUtils;
 import org.aospextended.settings.fod.FodUtils;
+import org.aospextended.settings.touchsampling.TouchSamplingUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -35,5 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
         FodUtils.startService(context);
+        TouchSamplingUtils.restoreSamplingValue(context);
     }
 }
