@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.fod;
+package org.aospextended.settings.fod;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
